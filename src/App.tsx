@@ -1,9 +1,9 @@
 import "./index.css";
 import "@esri/calcite-components/components/calcite-shell";
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
-import { authenticate } from "./autho";
+// import { authenticate } from "./autho";
 
 // Components
 import Header from "./components/Header";
@@ -28,14 +28,14 @@ export default function App() {
   //------------------------
   //  Authenticate viewers
   //------------------------
-  const [loggedInState, setLoggedInState] = useState<boolean>(false);
-
-  useEffect(() => {
-    authenticate(setLoggedInState, "3cpXdFaIBrLRE8uY");
-  }, []);
+  // const [loggedInState, setLoggedInState] = useState<boolean>(false);
+  // 
+  // useEffect(() => {
+  //   authenticate(setLoggedInState, "3cpXdFaIBrLRE8uY");
+  // }, []);
 
   return (
-    loggedInState && (
+    // loggedInState && (
       <calcite-shell>
         <MyContextProvider>
           <QueryClientProvider client={queryClient}>
@@ -47,5 +47,5 @@ export default function App() {
         </MyContextProvider>
       </calcite-shell>
     )
-  );
+  //);
 }

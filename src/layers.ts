@@ -238,7 +238,7 @@ export const lotLayer = new FeatureLayer({
   layerId: 31,
   title: "Acquisition Status",
   renderer: lotLayerRenderer,
-  popupTemplate: lotPopupTemplate,
+  popupEnabled: false, // popupTemplate: lotPopupTemplate,
   labelingInfo: [lotCnLabelClass],
   labelsVisible: true,
   listMode: "show",
